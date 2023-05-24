@@ -1,6 +1,4 @@
-def l3():
-    print("введите текст")
-    text = str(input())
+def l3(text):
     index = 0; summ = 0; i1 = 0; i2 = 0; i = 0
 
     for _ in text:
@@ -15,7 +13,7 @@ def l3():
         i1 = text.rfind(' ') + 1;
         i2 = index1
 
-    print("Самое длинное слово - " + text[i1:i2])
+    s1 = "Самое длинное слово - " + text[i1:i2]
 
     index = 0; summ1 = 0
     for _ in text:
@@ -26,4 +24,9 @@ def l3():
             i1 = index
             i2 = index1
         index = index1 + 1
-    print("Чаще всего, " + str(summ1) +" раз, встретилось - " + text[i1:i2])
+    s2 = "Чаще всего, " + str(summ1) +" раз, встретилось - " + text[i1:i2]
+    return s1, s2
+
+print("введите текст ")
+text = str(input())
+print(l3(text))
